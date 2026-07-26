@@ -55,10 +55,9 @@ export function SceneOwner() {
             </div>
 
             {/* Real photo, framed as a card rather than a small circle — a soft
-                multi-color glow ring stands in for "RGB" lighting without clashing
-                with the rest of the (mostly teal) palette. */}
+                grayscale glow ring, monochrome to match the rest of the theme. */}
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xs">
-              <div className="absolute -inset-[3px] rounded-[2rem] bg-gradient-to-br from-accent via-[#a78bfa] to-[#c9a15a] opacity-70 blur-[3px]" />
+              <div className="absolute -inset-[3px] rounded-[2rem] bg-gradient-to-br from-accent via-[#d4d4d4] to-[#737373] opacity-70 blur-[3px]" />
               <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-black/40">
                 <Image
                   src="/owner-studio.jpg"

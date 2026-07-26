@@ -79,7 +79,7 @@ export default function AboutPage() {
               Counter scene — contained card with a soft glow ring, not a
               full-bleed banner competing with the headline for attention. */}
           <div className="relative mx-auto aspect-4/5 w-full max-w-md">
-            <div className="absolute -inset-0.75 rounded-4xl bg-linear-to-br from-accent via-[#a78bfa] to-[#c9a15a] opacity-70 blur-[3px]" />
+            <div className="absolute -inset-0.75 rounded-4xl bg-linear-to-br from-accent via-[#d4d4d4] to-[#737373] opacity-70 blur-[3px]" />
             <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-black/40">
               <Image
                 src="/owner-office.png"

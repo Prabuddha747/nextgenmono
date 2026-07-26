@@ -6,10 +6,11 @@ import { useMotionValueEvent, type MotionValue } from "framer-motion";
 const REEL_FRAME_COUNT = 147;
 const reelFrameSrc = (i: number) => `/featured-builds-reel/frame-${String(i).padStart(4, "0")}.jpg`;
 
-// Cinematic PC-assembly b-roll, scrubbed 1:1 against the scroll progress passed in:
-// frame 1 (parts exploded mid-air) at progress 0, frame 147 (assembled case) at
-// progress 1. Frame 1 renders immediately on mount — no gated/blank state — so the
-// backdrop is visible the instant this scene enters view.
+// Cinematic PC-assembly b-roll (client-supplied clip, already monochrome), scrubbed
+// 1:1 against the scroll progress passed in: frame 1 (parts exploded mid-air) at
+// progress 0, frame 147 (assembled case) at progress 1. Frame 1 renders immediately
+// on mount — no gated/blank state — so the backdrop is visible the instant this
+// scene enters view.
 export function BuildReelBackground({ progress }: { progress: MotionValue<number> }) {
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -42,10 +43,9 @@ export function BuildReelBackground({ progress }: { progress: MotionValue<number
             "radial-gradient(60% 60% at 50% 45%, transparent 40%, rgba(10,10,12,0.55) 76%, rgba(10,10,12,0.92) 100%)",
         }}
       />
-      {/* The enhanced source clip carries a third-party watermark burned into the
-          top-left corner of every frame. Covered with our own wordmark instead of
-          re-extracting from the original (lower-quality) source. Sized in vw/clamp,
-          not fixed Tailwind spacing — the video scales with viewport width via
+      {/* Wordmark badge over the clip, not a watermark cover this time — this
+          source clip is clean, this just brands the b-roll. Sized in vw/clamp, not
+          fixed Tailwind spacing — the video scales with viewport width via
           object-cover, so a fixed-px badge falls behind on larger screens exactly
           the way the first attempt did. Hardcoded dark background + white text
           regardless of site theme — the video itself is always dark, so a
