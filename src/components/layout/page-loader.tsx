@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const DURATION_MS = 1700;
-// The same open-case shot the homepage hero used to open on — brought back here
-// so first paint shows brand imagery instead of a blank black screen.
-const LOADER_PHOTO = "https://images.unsplash.com/photo-1756576630180-653cbd594433";
 
 export function PageLoader() {
   const [visible, setVisible] = useState(true);
@@ -26,16 +22,6 @@ export function PageLoader() {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black"
         >
-          <Image
-            src={LOADER_PHOTO}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-
           <div className="relative flex h-40 w-40 items-center justify-center">
             <div
               className="absolute inset-0 animate-spin rounded-full opacity-90"
