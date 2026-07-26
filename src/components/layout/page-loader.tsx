@@ -42,7 +42,7 @@ export function PageLoader() {
               style={{
                 animationDuration: "1.4s",
                 background:
-                  "conic-gradient(from 0deg, #22d3ee, #a855f7, #f43f5e, #fbbf24, #34d399, #22d3ee)",
+                  "conic-gradient(from 0deg, #ffffff, #808080, #ffffff, #333333, #ffffff, #808080, #ffffff)",
                 WebkitMask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px))",
                 mask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px))",
               }}
@@ -53,7 +53,7 @@ export function PageLoader() {
                 animationDuration: "2.2s",
                 animationDirection: "reverse",
                 background:
-                  "conic-gradient(from 90deg, #f43f5e, #22d3ee, #a855f7, #fbbf24, #f43f5e)",
+                  "conic-gradient(from 90deg, #808080, #ffffff, #333333, #ffffff, #808080)",
                 WebkitMask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
                 mask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
               }}

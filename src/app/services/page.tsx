@@ -26,13 +26,13 @@ export default function ServicesPage() {
     <>
       <Section className="relative overflow-hidden pb-0 pt-14">
         {/* Page-local glow, not a change to the shared .atmosphere layer —
-            same violet accent as the rest of the site, scoped to this hero only. */}
+            same monochrome accent glow as the rest of the site, scoped to this hero only. */}
         <div
           aria-hidden
           className="pointer-events-none absolute -right-1/4 -top-1/3 hidden h-[140%] w-[70%] dark:block"
           style={{
             background:
-              "radial-gradient(50% 50% at 50% 50%, rgba(168,85,247,0.18), rgba(147,51,234,0.08) 55%, transparent 75%)",
+              "radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.18), rgba(200,200,200,0.08) 55%, transparent 75%)",
           }}
         />
         <div className="relative grid gap-10 border-b border-border pb-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">

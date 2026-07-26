@@ -46,7 +46,7 @@ export function Navbar() {
           flat bg-background before the user scrolled 12px, which read as an
           inconsistent navbar depending on how tall/short the page was. Active/
           hover states use brightness (foreground vs foreground/60), not a hue —
-          no teal, no purple text, per direct request — but the violet glow bloom
+          no teal, no purple text, per direct request — but the accent glow bloom
           behind the bar (seen naturally on the homepage's video) is now baked in
           here directly, so every page gets the same glass+glow look, not just
           whichever page happens to have colorful content behind it. */}

@@ -4,26 +4,21 @@
 
 :root,
 .dark {
-  /* v2 token pass — bg-void/bg-panel/ink-hi/ink-mid/accent-signal/accent-warn-gold/
-     hairline from the design spec, mapped onto our existing variable names rather
-     than a parallel set, since every component already reads --background/--accent/etc. */
-  --background: #0d0a11;
-  --surface: #16131b;
-  --surface-2: #1e1a24;
-  --foreground: #f3f1ec;
-  --muted: #9c9a97;
-  --border: rgba(243, 241, 236, 0.08);
-  /* Primary accent switched from teal to violet, site-wide — every button,
-     link, badge, icon, and category color that reads --accent picks this up
-     automatically since none of them hardcode the old hex. */
-  --accent: #a855f7;
-  --accent-foreground: #ffffff;
-  --sale: #c9a15a;
-  --success: #34d399;
+  /* Monochrome pass (variant 1 of client's B&W-vs-purple comparison) — brand
+     identity is now grayscale end to end, matching the logo's pure black-on-
+     white line art. --sale/--success are grayscale too here; the functional-
+     color variant (gold/green kept) is a separate commit to compare against. */
+  --background: #0a0a0a;
+  --surface: #171717;
+  --surface-2: #212121;
+  --foreground: #f5f5f5;
+  --muted: #a3a3a3;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #ffffff;
+  --accent-foreground: #0a0a0a;
+  --sale: #b5b5b5;
+  --success: #8a8a8a;
 
-  /* Category accents — Tech Aurora: gaming stays the site's signal accent, laptops/
-     business get a cool silver, accessories keep the brass "sale" tone. No
-     fabricated "creator" accent — we don't carry a product line that maps to one. */
   --accent-business: #d6d9e0;
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.07);
@@ -32,19 +27,16 @@
 }
 
 .light {
-  /* Ivory, not pure white — a flat-white background read too bright/harsh; this
-     stays soft and warm while cards (--surface) sit just a touch lighter still,
-     so there's gentle layering instead of one flat white plane. */
-  --background: #faf7f0;
-  --surface: #fffdf9;
-  --surface-2: #f1ebe0;
-  --foreground: #1d1a17;
-  --muted: #736c60;
-  --border: #e3ddd0;
-  --accent: #9333ea;
+  --background: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f0f0f0;
+  --foreground: #171717;
+  --muted: #737373;
+  --border: #e5e5e5;
+  --accent: #171717;
   --accent-foreground: #ffffff;
-  --sale: #d97706;
-  --success: #059669;
+  --sale: #525252;
+  --success: #8a8a8a;
 
   --accent-business: #52525b;
   --glass-bg: rgba(0, 0, 0, 0.02);
@@ -79,18 +71,19 @@ body {
 /* Atmospheric multi-layer backdrop — dark theme only. Several low-opacity radial
    glows over the flat --background rather than one gradient, so the page reads
    as lit from several soft sources instead of a flat black void. Fixed + behind
-   everything + pointer-events:none so it never affects layout or interaction. */
+   everything + pointer-events:none so it never affects layout or interaction.
+   Grayscale glows for the monochrome variant — was warm/violet-tinted before. */
 .dark .atmosphere {
   position: fixed;
   inset: 0;
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(50% 40% at 15% 10%, rgba(255, 180, 120, 0.05), transparent 65%),
-    radial-gradient(50% 45% at 88% 12%, rgba(168, 85, 247, 0.12), transparent 68%),
-    radial-gradient(60% 50% at 20% 95%, rgba(140, 90, 255, 0.1), transparent 68%),
-    radial-gradient(55% 50% at 92% 90%, rgba(168, 85, 247, 0.09), transparent 68%),
-    radial-gradient(80% 60% at 50% 50%, #0e0b13, #07050a 100%);
+    radial-gradient(50% 40% at 15% 10%, rgba(255, 255, 255, 0.05), transparent 65%),
+    radial-gradient(50% 45% at 88% 12%, rgba(255, 255, 255, 0.08), transparent 68%),
+    radial-gradient(60% 50% at 20% 95%, rgba(255, 255, 255, 0.06), transparent 68%),
+    radial-gradient(55% 50% at 92% 90%, rgba(255, 255, 255, 0.05), transparent 68%),
+    radial-gradient(80% 60% at 50% 50%, #0e0e0e, #070707 100%);
 }
 
 .light .atmosphere {

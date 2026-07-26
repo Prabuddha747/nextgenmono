@@ -12,12 +12,12 @@ import { glowOverlayStyle } from "@/lib/glow";
 import { clsx } from "clsx";
 
 // Real Unsplash photos (site's usual license-free-stock convention), tinted
-// violet — the same glow language as the atmosphere blobs and the RGB
-// owner-photo ring — rather than a literal custom illustration we can't produce.
+// white — the same monochrome glow language as the atmosphere blobs — rather
+// than a literal custom illustration we can't produce.
 const GLOW_TINTS = [
-  "rgba(168,85,247,0.4)", // violet — CCTV
-  "rgba(168,85,247,0.4)", // violet — networking
-  "rgba(147,51,234,0.4)", // deeper violet — enterprise/IT
+  "rgba(255,255,255,0.4)", // CCTV
+  "rgba(255,255,255,0.4)", // networking
+  "rgba(200,200,200,0.4)", // enterprise/IT
 ];
 
 function ServiceVisual({ photo, glow }: { photo: string; glow: string }) {
