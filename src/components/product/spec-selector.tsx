@@ -84,7 +84,7 @@ export function SpecSelector({
 
       <motion.div
         layout
-        className="sticky bottom-4 mt-8 flex items-center justify-between gap-4 rounded-2xl border border-border bg-background/95 p-5 shadow-xl backdrop-blur"
+        className="sticky bottom-4 mt-8 flex flex-col gap-3 rounded-2xl border border-border bg-background/95 p-5 shadow-xl backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:gap-4"
       >
         <div>
           <p className="text-xs text-muted">Estimated total</p>
@@ -101,7 +101,7 @@ export function SpecSelector({
           href={buildWhatsAppLink(message)}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 whitespace-nowrap rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-transform hover:scale-105"
+          className="flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-transform hover:scale-105 sm:w-auto"
         >
           <MessageCircle className="h-4 w-4" />
           {ctaLabel}

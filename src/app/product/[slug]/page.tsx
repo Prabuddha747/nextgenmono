@@ -102,7 +102,7 @@ export default async function ProductPage({
             </div>
           )}
 
-          <div className="mt-8 grid grid-cols-3 gap-3 border-t border-border pt-6 text-center text-xs text-muted">
+          <div className="mt-8 grid grid-cols-1 gap-3 border-t border-border pt-6 text-center text-xs text-muted sm:grid-cols-3">
             <div className="flex flex-col items-center gap-1.5">
               <ShieldCheck className="h-5 w-5 text-accent" strokeWidth={1.5} />
               Warranty backed

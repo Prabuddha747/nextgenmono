@@ -54,7 +54,7 @@ export function WhoWeAreCard() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2.5">
+      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {chips.map((chip) => (
           <div
             key={chip.label}

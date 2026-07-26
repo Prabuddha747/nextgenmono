@@ -36,7 +36,7 @@ export function SceneOwner() {
                 WhatsApp Us
               </Button>
 
-              <FanDeck progress={progress} className="mt-12 grid grid-cols-2 gap-4">
+              <FanDeck progress={progress} className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {proofPoints.map((point, i) => (
                   <FanCard
                     key={point.label}
